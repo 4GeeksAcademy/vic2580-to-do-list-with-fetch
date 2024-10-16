@@ -1,12 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e1e1e, #333, #777, #f0f0f0); 
+    background-size: 400% 400%; 
+    animation: gradientShift 20s ease infinite; 
+    height: 100vh;
+}
 
-/* 
+h1 {
+    font-family: 'Poppins', sans-serif; 
+    font-size: 4.5rem;
+    font-weight: 800;
+    color: #f0f0f0; 
+    text-align: center;
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.4); 
+    letter-spacing: 3px;
+    padding: 30px;
+    margin: 20px 0; 
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
 
-    You can write your own styles here...
-    
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
+h1:hover {
+    transform: scale(1.05);
+    color: #fff; 
+}
 
-*/
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.todo-list {
+    margin: auto;
+    margin-top: 25px;
+    width: 600px;
+    padding: 0;
+    list-style: none;
+    background: linear-gradient(lightgrey, darkgray, lightgrey, darkgray);
+    font-size: 18px;
+}
+
+ul li {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    list-style: none;
+    background: linear-gradient(lightgrey, darkgray, lightgrey, darkgray);
+}
+
+.delete-button {
+    background: none;
+    border: none;
+    font-size: 16px;
+    float: right;
+}
+
+.task-count {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    color: lightgray;
+}
